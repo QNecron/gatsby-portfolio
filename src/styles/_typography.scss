@@ -1,0 +1,10 @@
+.heading-primary {
+  color: $red-d;
+  font-weight: 900;
+  letter-spacing: $space-4;
+  text-transform: uppercase;
+}
+
+.srt {
+  @extend %screen-reader-text;
+}

@@ -1,0 +1,23 @@
+$mobile: "(max-width: 767px)";
+$mobile-s: "(max-width: 320px)";
+$tablet-p: "(max-width: 768px)";
+$tablet-l: "(max-width: 1024px)";
+$tablet-range: "(min-width: 768px) and (max-width: 1024px)";
+$tablet-up: "(min-width: 768px)";
+$desktop: "(min-width: 1025px)";
+$desktop-s: "(min-width: 1366px)";
+$desktop-m: "(min-width: 1440px)";
+$desktop-l: "(min-width: 1600px)";
+$desktop-x: "(min-width: 1920px)";
+
+@mixin media($queries...) {
+
+  @each $query in $queries {
+
+    @media only screen and #{$query} {
+      @content;
+    }
+
+  }
+
+}

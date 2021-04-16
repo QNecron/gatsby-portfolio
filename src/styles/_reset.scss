@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $black;
+  font-family: $sans;
+  font-size: $size;
+  letter-spacing: rem(1);
+  padding-top: $space-48;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.1;
+}
+
+p {
+  margin-top: $space-16;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+a, button:not([class]) {
+  color: $red-d;
+  text-decoration: underline;
+  transition: $normal;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+
+}
+
+ol, ul {
+  list-style-type: none;
+}

@@ -1,0 +1,102 @@
+.header-container {
+  background: $black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  @include shadow(1, 0);
+}
+
+.navigation-container {
+  display: flex;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% - #{$space-48});
+}
+
+.nav-mobile,
+.nav-link,
+.nav-resume {
+  @extend %black-letter;
+  color: $white;
+  display: block;
+  font-size: rem(12);
+  padding: $space-16;
+  text-decoration: none;
+}
+
+.nav-home {
+  background: $cyan;
+  color: $black;
+  float: left;
+  height: $space-48;
+  width: $space-48;
+  position: relative;
+
+  &:focus,
+  &:hover {
+    background: $black;
+    color: $cyan;
+  }
+
+  .material-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+.nav-mobile {
+
+  // media
+  @include media($tablet-up) {
+    display: none;
+  }
+
+}
+
+.nav-link {
+  position: relative;
+
+  &:after {
+    content: "";
+    background: $cyan;
+    position: absolute;
+    height: rem(2);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: scale(0, 1);
+    transform-origin: 0 0;
+    transition: inherit;
+  }
+
+  &:focus,
+  &:hover {
+    color: $cyan;
+
+    &:after {
+      transform: scale(1, 1);
+    }
+
+  }
+
+}
+
+.nav-resume {
+  background: $red-d;
+  color: $white;
+
+  &:focus,
+  &:hover {
+    background: $red-l;
+    @include shadow(0, 2, black, .48);
+  }
+
+}

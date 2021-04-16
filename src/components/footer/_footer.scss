@@ -1,0 +1,9 @@
+.footer-container {
+  @extend %black-letter;
+  background: $black;
+  color: $white;
+  font-size: rem(12);
+  font-weight: 900;
+  padding: $space-16;
+  text-align: center;
+}

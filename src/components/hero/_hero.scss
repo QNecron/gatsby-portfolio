@@ -1,0 +1,24 @@
+[data-section="hero"] {
+  background-color: $black;
+  background-image: url($digital-squared), linear-gradient(135deg, rgba($blue, 1) 0%, rgba($pink, 1) 100%);
+  color: $white;
+  padding: 32vh 0;
+  letter-spacing: $space-8;
+  text-align: center;
+  text-transform: uppercase;
+  @include shadow(0, 1);
+
+  .wrapper {
+    padding: 0 8vw;
+  }
+
+}
+
+.hero-primary {
+  font-size: rem(56);
+}
+
+.hero-secondary {
+  font-size: rem(28);
+  font-weight: 400;
+}

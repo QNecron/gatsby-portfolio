@@ -1,0 +1,17 @@
+@import "_colors";
+@import "_fonts";
+@import "_functions";
+@import "_media-query";
+@import "_patterns";
+@import "_placeholders";
+@import "_shadows";
+@import "_spacing";
+@import "_timings";
+@import "_typography";
+
+@import "_reset";
+
+@import "../components/header/_header";
+@import "../components/footer/_footer";
+@import "../components/hero/_hero";
+@import "../components/section/_section";
