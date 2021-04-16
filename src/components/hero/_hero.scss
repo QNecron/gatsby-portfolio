@@ -2,11 +2,18 @@
   background-color: $black;
   background-image: url($digital-squared), linear-gradient(135deg, rgba($blue, 1) 0%, rgba($pink, 1) 100%);
   color: $white;
-  padding: 32vh 0;
   letter-spacing: $space-8;
   text-align: center;
   text-transform: uppercase;
   @include shadow(0, 1);
+
+  // media
+  @include media($tablet-up) {
+    padding: calc(24vh + #{$space-48}) 0 24vh 0;
+  }
+  @include media($mobile) {
+    padding: calc(24vh + #{$space-48}) 0 24vh 0;
+  }
 
   .wrapper {
     padding: 0 8vw;
@@ -15,10 +22,28 @@
 }
 
 .hero-primary {
-  font-size: rem(56);
+
+  // media
+  @include media($tablet-up) {
+    font-size: rem(56);
+  }
+  @include media($mobile) {
+    font-size: rem(32);
+  }
+
 }
 
 .hero-secondary {
-  font-size: rem(28);
   font-weight: 400;
+
+  // media
+  @include media($tablet-up) {
+    font-size: rem(28);
+  }
+  @include media($mobile) {
+    font-size: rem(24);
+    margin: 0 auto;
+    max-width: rem(204);
+  }
+
 }

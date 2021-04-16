@@ -6,6 +6,11 @@ const Header = ({ ...props }) => {
   const [menu, menuUpdate] = useState(false)
   const menuToggle = () => menuUpdate(value => !value)
 
+  const smoothScroll = (e, id) => {
+    e.preventDefault();
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
 
     <header className="header-container" role="banner">
@@ -34,7 +39,7 @@ const Header = ({ ...props }) => {
 
             return(
               <li className="nav-item" key={index}>
-                <a href={"#" + data.id} className={data.classNav}>{data.id}</a>
+                <a href={"#" + data.id} className={data.classNav} onClick={(e) => smoothScroll(e, data.id)}>{data.id}</a>
               </li>
             )
 

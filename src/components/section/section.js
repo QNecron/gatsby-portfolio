@@ -7,7 +7,7 @@ const Section = ({ ...props }) => {
 
     <>
 
-      <section id={props.id} className="section" data-section={props.type}>
+      <section id={props.id} className={`section ${ props.theme }`} data-section={props.type}>
         <div className="wrapper">
           {props.children}
         </div>
@@ -26,6 +26,7 @@ Section.propTypes = {
 }
 
 Section.defaultProps = {
+  theme: "white",
   type: "default"
 }
 

@@ -9,12 +9,17 @@ body {
   font-family: $sans;
   font-size: $size;
   letter-spacing: rem(1);
-  padding-top: $space-48;
   line-height: 1.4;
 }
 
 h1, h2, h3, h4 {
   line-height: 1.1;
+
+  // media
+  @include media($mobile) {
+    line-height: 1.5;
+  }
+
 }
 
 p {
@@ -33,10 +38,13 @@ button {
   appearance: none;
 }
 
+a, button {
+  transition: $normal;
+}
+
 a, button:not([class]) {
   color: $red-d;
   text-decoration: underline;
-  transition: $normal;
 
   &:focus,
   &:hover {

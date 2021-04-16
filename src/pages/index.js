@@ -31,7 +31,7 @@ const Index = () => (
       else {
 
         return(
-          <Section id={data.id} key={index}>
+          <Section id={data.id} theme={data.classSection} key={index}>
             <h2 className="heading-primary">{data.id}</h2>
             <p>{data.copy}</p>
           </Section>
